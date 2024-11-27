@@ -6,17 +6,17 @@ const router = new Router();
 
 router.get("/", (ctx) => {
   ctx.type = "html";
-  ctx.body = "<h2>Index sayfasına hoşgeldiniz</h2>";
+  ctx.body = "<h1>Index sayfasına hoşgeldiniz</h1>";
 });
 
 router.get("/hakkimda", (ctx) => {
   ctx.type = "html";
-  ctx.body = "<h2>Hakkımda sayfasına hoşgeldiniz</h2>";
+  ctx.body = "<h1>Hakkımda sayfasına hoşgeldiniz</h1>";
 });
 
 router.get("/iletisim", (ctx) => {
   ctx.type = "html";
-  ctx.body = "<h2>İletişim sayfasına hoşgeldiniz</h2>";
+  ctx.body = "<h1>İletişim sayfasına hoşgeldiniz</h1>";
 });
 
 app.use(async (ctx, next) => {
@@ -24,7 +24,7 @@ app.use(async (ctx, next) => {
   if (ctx.status === 404) {
     ctx.status = 404;
     ctx.type = "html";
-    ctx.body = "<h2>404 sayfa bulunamadı.</h2>";
+    ctx.body = "<h1>404 sayfa bulunamadı.</h1>";
   }
 });
 
